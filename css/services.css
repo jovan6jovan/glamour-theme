@@ -1,0 +1,267 @@
+
+/* SERVICES-BANNER */
+
+.services-banner {
+    background-image: url('../img/balayage.png');
+    background-position: center;
+    background-size: cover;
+    color: #383838;
+    min-height: 40vh;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+/* SERVICES-SERVICES */
+
+.services-services {
+    background: #383838;
+    color: #FEFCFB;
+}
+
+.services-services h2 {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem !important;
+    transition: all 0.5s ease-out;
+}
+
+.services-container {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.services-service {
+    border: 1px solid #DA4167;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-service h4 {
+    margin-top: 1rem;
+    border-bottom: 1px solid #DA4167;
+}
+
+.services-service p {
+    padding: 1rem;
+    margin: 0;
+}
+
+/* SERVICES-PRICING */
+
+.services-pricing {
+    font-family: 'Didact Gothic', sans-serif;
+    padding: 0 2rem;
+    font-weight: bold;
+}
+
+.services-pricing h2 {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.dotted-lists-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.dotted-list {
+    list-style-type: none;
+}
+  
+  .dotted-list li {
+    overflow: hidden;
+    margin: 0 0 10px 0;
+    position: relative;
+}
+  
+  .dotted-list li span:first-child {
+     float: left;
+     display: inline-block;
+     padding: 0 20px 0 0;
+     background-color: #FEFCFB;
+     z-index: 10;
+     position: relative;
+}
+  
+  .dotted-list li span + span {
+    float: right;
+    display: inline-block;
+    padding: 0 3px 0 20px;
+    background-color: #FEFCFB;
+    z-index: 10;
+    position: relative;
+}
+  
+  .dotted-list li:before {
+    content: ".................................................................................................................................................................................................................................................................................................................................................................";
+    white-space: nowrap;
+    position: absolute;
+    color: #DA4167;
+}
+
+
+  /* SERVICES-GALLERY */
+
+  .services-gallery {
+      background: #383838;
+      color: #FEFCFB;
+  }
+
+  .services-gallery h2, p {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.services-gallery a {
+    color: #DA4167;
+}
+
+  .services-gallery-container {
+      margin-left: 2rem;
+      margin-right: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+  } 
+
+  .services-gallery-container > div > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      padding: 5px;
+  }
+
+  .services-gallery-container > div {
+      flex: 1 1 200px;
+  }
+
+  /* .vertical {
+      width: 150px;
+      height: 225px;
+  }
+
+  .normal {
+      width: 150px;
+      height: 150px;
+  }
+
+  .big {
+      width: 300px;
+      height: 280px; 
+  } */
+
+  /* .services-gallery-container {
+    line-height: 0;
+    column-count: 1;
+    column-gap: 0; 
+}
+
+   .services-gallery img {
+      width: 100%;
+      height: auto;
+      padding: 5px;
+  } */
+
+  /* SERVICES-CONTACT-US */
+
+  .services-contact-us {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(114.67196031231879deg, rgba(246, 245, 245,1) 5.736111111111111%,rgba(220, 220, 220,1) 96.29166666666666%);
+      color: #383838;
+  }
+
+  .services-contact-us h2,
+  .services-contact-us a {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      text-align: center;
+  }
+
+  .services-contact-us a {
+      color: #383838;
+  }
+
+
+  /* ===============================================================================
+DESKTOP LAYOUT
+================================================================================== */
+
+@media screen and (min-width: 1281px) {
+
+    /* SERVICES-SERVICES */
+
+    .services-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .services-service { margin-right: 2rem; }
+    .services-service:last-child { margin-right: 0; }
+
+    .services-service h4:hover {
+        color: #DA4167;
+        border-bottom: 1px solid #FEFCFB;
+        transition: all .5s ease-in;
+    }
+
+    .dotted-lists-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .dotted-list {
+        width: 100%;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .dotted-list:last-child { margin-right: 0; }
+
+    /* .services-gallery-container {
+        max-width: 1024px;
+        margin: 0 auto;
+        column-count: 5;
+     } */
+
+     .services-gallery-container {
+         max-width: 1024px;
+         margin: 0 auto;
+     }
+    
+ }
+
+
+ /* ===============================================================================
+TABLETS, IPADS (PORTRAIT)
+================================================================================== */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) { 
+
+    /* SERVICES-SERVICES */
+
+    .services-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    /* .services-gallery-container {
+        column-count: 3;
+     } */
+
+    .services-gallery-container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}
